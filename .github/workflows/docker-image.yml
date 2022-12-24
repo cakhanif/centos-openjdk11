@@ -15,6 +15,6 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag cakhanif/openjdk11-centos:$(date +%s)
+      run: docker build . --file Dockerfile --tag cakhanif/openjdk11-centos:$(date +%Y%m%d)
     - name: Push Docker Image
-      run: echo ${{ secrets.DOCKER_PASSWORD }} | docker login --username cakhanif --password-stdin && docker push cakhanif/openjdk11-centos:$(date +%s)
+      run: echo ${{ secrets.DOCKER_PASSWORD }} | docker login --username cakhanif --password-stdin && docker push cakhanif/openjdk11-centos:$(date +%Y%m%d)
