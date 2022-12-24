@@ -1,4 +1,4 @@
-FROM centos:7
+FROM quay.io/centos/centos:stream8
 
 LABEL Maintainer='Mohammad Hanif'
 LABEL Description='For Base Image JDK 11'
